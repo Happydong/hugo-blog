@@ -1,47 +1,81 @@
 baseURL = 'http://happydong.github.io/'
-languageCode = 'zh-CN'
+languageCode = 'zh-Hans'
 title = 'My Blog'
-theme = 'anatole'
+theme = 'hugo-tranquilpeak-theme'
 
 [params]
-title = "I'm Chao Dong"
-author = "Chao Dong"
-description = "Call me Chaodong"
-profilePicture = "https://s3.bmp.ovh/imgs/2022/01/6b90d7d809249c8f.jpg"
-disableThemeSwitcher = true # Theme switcher is enabled by default
-doNotLoadAnimations = true # Animations are loaded by default
-singleDateFormat = "Mon, Jan 2, 2006"
-indexDateFormat = "Mon, Jan 2, 2006"
-listDateFormat = "Jan 2"
-contentratio = 0.7
-postSectionName = "blog"
+sidebarBehavior = 1
+thumbnailImage = true
+thumbnailImagePosition = "right"
+autoThumbnailImage = true
+coverImage = "images/cover.jpg"
+favicon = "/favicon.png"
+imageGallery = true
+hierarchicalCategories = true
+syntaxHighlighter = 'highlight.js'
+keywords = ["development", "next-gen"]
+dateFormat = "2 January 2006"
+defaultContentLanguage = "fr-fr"
+[params.header.rightLink]
+  class = "open-algolia-search"
+  icon = "search"
+  url = "/#search"
+[author]
+  name = "Happy Dong"
+  bio = "开心 coding... "
+  job = "PHP & GO"
+  location = "QingDao"
+  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
+  # gravatarEmail = "linuxof@gmail.com"
+  # Your profile picture
+  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
+  picture = "https://s3.bmp.ovh/imgs/2022/01/6b90d7d809249c8f.jpg"
 
 
-[languages]
-[en]
-LanguageName = "zh"
-
-
-[ar]
-LanguageName = "China"
 
 
 [menu]
 
-  [[menu.main]]
-  name = "Home"
+ [[menu.main]]
+  weight = 1
   identifier = "home"
-  weight = 100
+  name = "Home"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-home\" aria-hidden=\"true\"></i>"
   url = "/"
-
-  [[menu.main]]
-  name = "Posts"
-  weight = 200
-  identifier = "posts"
-  url = "/post/"
-
-  [[menu.main]]
-  name = "About"
-  weight = 300
+[[menu.main]]
+  weight = 2
+  identifier = "categories"
+  name = "Categories"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-bookmark\" aria-hidden=\"true\"></i>"
+  url = "/categories"
+[[menu.main]]
+  weight = 3
+  identifier = "tags"
+  name = "Tags"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-tags\" aria-hidden=\"true\"></i>"
+  url = "/tags"
+[[menu.main]]
+  weight = 4
+  identifier = "Post"
+  name = "Archives"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-archive\" aria-hidden=\"true\"></i>"
+  url = "/post"
+[[menu.main]]
+  weight = 5
   identifier = "about"
-  url = "/about/"
+  name = "About"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-question\" aria-hidden=\"true\"></i>"
+  url = "/#about"
+
+[[menu.links]]
+  weight = 0
+  identifier = "github"
+  name = "GitHub"
+  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\" aria-hidden=\"true\"></i>"
+  url = "https://github.com/happydong"
+[[menu.links]]
+  weight = 1
+  identifier = "stackoverflow"
+  name = "Stack Overflow"
+  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-stack-overflow\" aria-hidden=\"true\"></i>"
+  url = "https://stackoverflow.com/users/7372104"
