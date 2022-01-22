@@ -1,0 +1,47 @@
+baseURL = 'http://happydong.github.io/'
+languageCode = 'zh-CN'
+title = 'My Blog'
+theme = 'anatole'
+
+[params]
+title = "I'm Chao Dong"
+author = "Chao Dong"
+description = "Call me Chaodong"
+profilePicture = "https://s3.bmp.ovh/imgs/2022/01/6b90d7d809249c8f.jpg"
+disableThemeSwitcher = true # Theme switcher is enabled by default
+doNotLoadAnimations = true # Animations are loaded by default
+singleDateFormat = "Mon, Jan 2, 2006"
+indexDateFormat = "Mon, Jan 2, 2006"
+listDateFormat = "Jan 2"
+contentratio = 0.7
+postSectionName = "blog"
+
+
+[languages]
+[en]
+LanguageName = "zh"
+
+
+[ar]
+LanguageName = "China"
+
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "Posts"
+  weight = 200
+  identifier = "posts"
+  url = "/post/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 300
+  identifier = "about"
+  url = "/about/"
